@@ -55,8 +55,8 @@ int main()
 	int collected{ 0 }, health{ 5 };
 
 	// The game loop
-    while (window.isOpen())
-    {
+	while (window.isOpen())
+	{
 		// Updates the number of presents that have been collected by santa
 		presentsCollected.setString(std::to_string(collected));
 		santaHealth.setString(std::to_string(health));
@@ -99,7 +99,7 @@ int main()
 		present.move({ 0.f, speed * delta });
 		coal.move({ 0.f, speed * delta });
 
-        window.clear();
+		window.clear();
 		window.draw(background);
 		window.draw(present);
 		window.draw(coal);
@@ -112,8 +112,8 @@ int main()
 		window.draw(healthRemaining);
 		window.draw(santaHealth);
 		window.draw(presentsCollected);
-        window.display();
-    }
+		window.display();
+	}
 }
 
 void borderColision(sf::Sprite& santa, sf::Sprite& present, sf::Sprite& coal)
@@ -132,11 +132,11 @@ void borderColision(sf::Sprite& santa, sf::Sprite& present, sf::Sprite& coal)
 }
 
 void movement(sf::Sprite& sprite, float speed, float delta)
-	{
+{
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
-		{
+	{
 		sprite.move({ -speed * delta, 0.f });
-		}
+	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
 	{
 		sprite.move({ speed * delta, 0.f });
